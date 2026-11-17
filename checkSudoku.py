@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
 def checkCuadratica(matrix):
+    assert isinstance(matrix, list)
     for fila in matrix:
         if len(fila) != len(matrix):
             return False
     return True
 
 def checkNum(matrix):
+    assert isinstance(matrix, list)
+
 #presuponiedo que la matriz es cuadratica
     digitoMaximo = len(matrix)
     for fila in matrix:
