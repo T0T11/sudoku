@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 
+from checkColumna import checkColumna
+from checkCuadratica import checkCuadratica
+from checkFila import checkFila
+from checkNumerosRango import checkNumerosRango
+from checkNum import checkNum
+
 def checkSudoku(sudoku):
 
-    return checkCuadratica(sudoku) and checkNumerosRango(sudoku) and checkFila(sudoku) and checkColumnas(sudoku) and checkNum(sudoku)
+    return (checkColumna(sudoku)
+            and checkCuadratica(sudoku)
+            and checkFila(sudoku)
+            and checkNumerosRango(sudoku)
+            and checkNum(sudoku))
 
 
 if __name__ == "__main__":
-
+    
    #-----------------------------------Sudoku---------------------------------------------
    
     correct = [[1, 2, 3],
