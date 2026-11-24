@@ -8,11 +8,11 @@ from checkNum import checkNum
 
 def checkSudoku(sudoku):
 
-    return (checkColumna(sudoku)
-            and checkCuadratica(sudoku)
-            and checkFila(sudoku)
+    return (checkCuadratica(sudoku)
+            and checkNum(sudoku)
             and checkNumerosRango(sudoku)
-            and checkNum(sudoku))
+            and checkFila(sudoku)
+            and checkColumna(sudoku))
 
 
 if __name__ == "__main__":
