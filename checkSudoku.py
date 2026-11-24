@@ -123,59 +123,55 @@ if __name__ == "__main__":
                                    [2, 1]]) is False
    #-----------------------------------Sudoku---------------------------------------------
    
-correct = [[1, 2, 3],
-           [2, 3, 1],
-           [3, 1, 2]]
+    correct = [[1, 2, 3],
+            [2, 3, 1],
+            [3, 1, 2]]
 
-incorrect = [[1, 2, 3, 4],
-             [2, 3, 1, 3],
-             [3, 1, 2, 3],
-             [4, 4, 4, 2]]
+    incorrect = [[1, 2, 3, 4],
+                [2, 3, 1, 3],
+                [3, 1, 2, 3],
+                [4, 4, 4, 2]]
 
-incorrect1 = [[1, 2, 3],
-              [2, 3, 1],
-              [2, 3, 1]]
+    incorrect1 = [[1, 2, 3],
+                [2, 3, 1],
+                [2, 3, 1]]
 
-incorrect2 = [[1, 2, 3, 4],
-              [2, 3, 1, 2],
-              [4, 1, 2, 3],
-              [2, 3, 1, 4]]
+    incorrect2 = [[1, 2, 3, 4],
+                [2, 3, 1, 2],
+                [4, 1, 2, 3],
+                [2, 3, 1, 4]]
 
-incorrect3 = [[1, 2, 3, 4, 5],
-              [2, 3, 1, 5, 6],
-              [4, 5, 2, 1, 3],
-              [3, 4, 5, 2, 1],
-              [5, 6, 4, 3, 2]]
+    incorrect3 = [[1, 2, 3, 4, 5],
+                [2, 3, 1, 5, 6],
+                [4, 5, 2, 1, 3],
+                [3, 4, 5, 2, 1],
+                [5, 6, 4, 3, 2]]
 
-incorrect4 = [['a', 'b', 'c'],
-              ['b', 'c', 'a'],
-              ['c', 'a', 'b']]
+    incorrect4 = [['a', 'b', 'c'],
+                ['b', 'c', 'a'],
+                ['c', 'a', 'b']]
 
-incorrect5 = [[1, 1.5],
-              [1.5, 1]]
+    incorrect5 = [[1, 1.5],
+                [1.5, 1]]
 
-irregular = [[1, 2, 3],
-             [2, 3, 1]]
+    irregular = [[1, 2, 3],
+                [2, 3, 1]]
 
-irregular2 = [[1, 2, 3],
-              [2, 3, 1],
-              [3, 1]]
-nuevo = [[]]
+    irregular2 = [[1, 2, 3],
+                [2, 3, 1],
+                [3, 1]]
+    nuevo = [[]]
 
-# Caso válido (matriz cuadrada NxN con enteros del 1 al N sin repetir en filas ni columnas)
-assert checkSudoku(correct) is True
+    assert checkSudoku(correct) is True
 
-# Casos inválidos por números repetidos en filas o columnas
-assert checkSudoku(incorrect) is False    # Repite el 3 en la última columna y el 4 en la última fila
-assert checkSudoku(incorrect1) is False   # Repite valores en las columnas
-assert checkSudoku(incorrect2) is False   # Repite el 2 en la segunda fila [2, 3, 1, 2]
+    assert checkSudoku(incorrect) is False    
+    assert checkSudoku(incorrect1) is False   
+    assert checkSudoku(incorrect2) is False   
 
-# Casos inválidos por tipo de dato o rango fuera de 1..N
-assert checkSudoku(incorrect3) is False   # Matriz 5x5 que contiene un 6 (fuera del rango 1..5)
-assert checkSudoku(incorrect4) is False   # Contiene strings ('a', 'b', 'c') en lugar de enteros
-assert checkSudoku(incorrect5) is False   # Contiene flotantes (1.5) en lugar de enteros
+    assert checkSudoku(incorrect3) is False   
+    assert checkSudoku(incorrect4) is False   
+    assert checkSudoku(incorrect5) is False   
 
-# Casos inválidos por dimensiones o estructura irregular
-assert checkSudoku(irregular) is False    # No es cuadrada (2 filas x 3 columnas)
-assert checkSudoku(irregular2) is False   # Filas de distinta longitud (la última tiene solo 2 elementos)
-assert checkSudoku(nuevo) is False        # Matriz vacía [[]]
+    assert checkSudoku(irregular) is False    
+    assert checkSudoku(irregular2) is False   
+    assert checkSudoku(nuevo) is False        
