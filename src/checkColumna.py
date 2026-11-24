@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def checkColumna(sudoku):
 
     assert isinstance(sudoku, list)

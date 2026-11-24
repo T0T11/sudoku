@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def checkNumerosRango(sudoku):
 
     assert isinstance(sudoku, list)

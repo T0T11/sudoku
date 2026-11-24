@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def checkCuadratica(matrix):
     assert isinstance(matrix, list)
     for fila in matrix:

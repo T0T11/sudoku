@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def checkFila(matriz):
     assert isinstance(matriz, list)                                  # Precondicion: Check if the given fila (queue) is valid.
                                                                   
