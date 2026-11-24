@@ -67,7 +67,7 @@ def checkNumerosRango(sudoku):
 
 def checkSudoku(sudoku):
 
-    return checkCuadratica(sudoku) and checkNumerosRango(sudoku) and checkFila(sudoku) and checkColumnas(sudoku)
+    return checkCuadratica(sudoku) and checkNumerosRango(sudoku) and checkFila(sudoku) and checkColumnas(sudoku) and checkNum(sudoku)
 
 
 if __name__ == "__main__":
