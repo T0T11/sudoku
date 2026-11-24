@@ -1,4 +1,4 @@
-def checkColumnas(sudoku):
+def checkColumna(sudoku):
 
     assert isinstance(sudoku, list)
 
@@ -18,5 +18,5 @@ def checkColumnas(sudoku):
     return True
 
 if __name__ == "__main__":
-    assert checkColumnas([[1, 2, 3], [2, 3, 1], [3, 1, 2]]) is True
-    assert checkColumnas([[1, 2, 3], [2, 3, 1], [2, 1, 3]]) is False
+    assert checkColumna([[1, 2, 3], [2, 3, 1], [3, 1, 2]]) is True
+    assert checkColumna([[1, 2, 3], [2, 3, 1], [2, 1, 3]]) is False
